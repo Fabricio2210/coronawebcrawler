@@ -10,15 +10,15 @@ const taskTabelaPaises = cron.schedule('*/10 * * * *', () => {
         const scrapedData = [];
         $("#main_table_countries_today tbody tr").each((index, element) => {
           const tds = $(element).find('td');
-          const pais = $(tds[0]).text();
-          const casototais = $(tds[1]).text();
-          const novosCasos = $(tds[2]).text();
-          const totalMortes = $(tds[3]).text();
-          const novasMortes = $(tds[4]).text();
-          const recuperados = $(tds[5]).text();
-          const casosAtivos = $(tds[6]).text();
-          const casosCriticos = $(tds[7]).text();
-          const casosPorUmMilhao = $(tds[8]).text();
+          const pais = $(tds[1]).text();
+          const casototais = $(tds[2]).text();
+          const novosCasos = $(tds[3]).text();
+          const totalMortes = $(tds[4]).text();
+          const novasMortes = $(tds[5]).text();
+          const recuperados = $(tds[6]).text();
+          const casosAtivos = $(tds[8]).text();
+          const casosCriticos = $(tds[9]).text();
+          const casosPorUmMilhao = $(tds[11]).text();
           const tableData = { pais, casototais, novosCasos,totalMortes,novasMortes,recuperados,casosAtivos,casosCriticos,casosPorUmMilhao };
           scrapedData.push(tableData);
         });
